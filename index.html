@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>TRƯỜNG THPT VĨNH CỬU</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+        }
+        .wrapper{
+            width: 85%;
+            margin: 20px auto;
+            background: white;
+            border: 3px solid #2ecc71;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        .header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img{
+            width: 80px;
+            margin-right: 15px;
+        }
+
+        .title{
+            flex: 1;
+            text-align: center;
+        }
+
+        .title h1{
+            color: blue;
+            margin-bottom: 5px;
+        }
+
+        .title p{
+            font-size: 14px;
+            color: #555;
+        }
+        .menu{
+            background: #0077cc;
+            border-radius: 25px;
+            padding: 10px 0;
+            margin-bottom: 25px;
+        }
+        .menu > ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .menu li{
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+        }
+        .menu input{
+            display: none;
+        }
+        .submenu{
+    display: none;
+    background: white;
+    color: black;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 260px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    list-style: none;        
+}
+
+.submenu li{
+    list-style: none;        
+    background: none;        
+    font-weight: normal;
+    padding: 6px 0;
+    border-bottom: 1px solid #ddd;
+    white-space: normal;     
+    word-break: keep-all;    
+    line-height: 1.5;
+    text-align: left;
+}
+        .menu input:checked + .submenu{
+            display: block;
+        }
+        .content p{
+            text-indent: 10px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .content img{
+            display: block;
+            margin: 20px auto;
+            max-width: 70%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <!-- Đổi link logo nếu có ảnh khác -->
+            <img src="https://v1.padlet.pics/3/image.webp?t=c_limit%2Cdpr_2%2Ch_503%2Cw_806&url=https%3A%2F%2Fu1.padletusercontent.com%2Fuploads%2Fpadlet-uploads-usc1%2F5093207150%2F54faa7078427d8a3f435774b37aafc72%2F_nh_2.png%3Fexpiry_token%3D5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8dmxJqYDvE2-MDbblcM-ZrVekXW99RReKkJFIoMoKio04hDUJmbp3nOiXZ_iRmDviLq-5H7uyE-U_PWlRKYSIo3Uw7OG2pli3NmbJ_UFghLnIoLjgkEAAHSxneeaDFsrJIh-L4qAmzbDNtBPd3Gmm5kuGQOu-HyDKq4eNXP_WPRg%3D%3D">
+        </div>
+
+        <div class="title">
+            <h1>TRƯỜNG THPT VĨNH CỬU</h1>
+            <p>Địa chỉ: Huyện Vĩnh Cửu, Tỉnh Đồng Nai</p>
+        </div>
+    </div>
+    <div class="menu">
+        <ul>
+
+            <li>
+                <label for="toan">Toán – Tin</label>
+                <input type="checkbox" id="toan">
+                <ul class="submenu">
+                    <li>Thầy Phạm Đình Hùng</li>
+                    <li>Cô Trần Hoàng Trang</li>
+                    <li>Cô Thân Thị Dung</li>
+                    <li>Cô Đinh Thị Hồng Giang</li>
+                    <li>Cô Phạm Thị Thủy</li>
+                    <li>Cô Nguyễn Thị Thanh Thúy</li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="ly">Lý – Sinh – CN</label>
+                <input type="checkbox" id="ly">
+                <ul class="submenu">
+                    <li>Cô Nguyễn Thị Minh Thơ</li>
+                    <li>Cô Huỳnh Thị Lệ Tuyết</li>
+                    <li>Cô Thái Thị Kim An</li>
+                    <li>Cô Phạm Thị Lệ Quyên</li>
+                    <li>Thầy Nguyễn Lê Quốc Bảo</li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="van">Văn – Địa</label>
+                <input type="checkbox" id="van">
+                <ul class="submenu">
+                    <li>Cô Võ Nguyễn Huyền Linh</li>
+                    <li>Cô Nguyễn Mộng Bích</li>
+                    <li>Cô Nguyễn Thị Hồng Tin</li>
+                    <li>Thầy Lê Ngọc Ẩn</li>
+                    <li>Cô Tống Thị Cúc</li>
+                </ul>
+            </li>
+
+<li>
+            <label for="anh">Tiếng Anh</label>
+            <input type="checkbox" id="anh">
+            <ul class="submenu">
+                <li>Thầy Mạch Văn Cho</li>
+                <li>Cô Vũ Thị Thanh Thủy</li>
+                <li>Cô Phạm Linh Trang</li>
+                <li>Cô Phan Hồng Nhung</li>
+                <li>Cô Lê Thị Hồng Nhung</li>
+                <li>Cô Huỳnh Thị Thủy</li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="suhoa">Sử – Hóa</label>
+            <input type="checkbox" id="suhoa">
+            <ul class="submenu">
+                <li>Cô Vũ Thị Ngọc Ánh</li>
+                <li>Cô Trương Thị Thanh Vân</li>
+                <li>Cô Phạm Thị Bích Hòa</li>
+                <li>Cô Lê Thị Hạnh</li>
+                <li>Cô Trương Thị Thanh Thảo</li>
+                <li>Cô Lương Thị Thủy</li>
+            </ul>
+        </li>
+
+        <li>
+            <label for="gdkp">GDKTPL – GDQP – GDTC</label>
+            <input type="checkbox" id="gdkp">
+            <ul class="submenu">
+                <li>Thầy Trần Sơn Hùng</li>
+                <li>Thầy Hồng Thái Tôn</li>
+                <li>Thầy Mai Quốc Định</li>
+                <li>Cô Lê Nguyệt Ánh</li>
+                <li>Cô Nguyễn Thị Minh Hải</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    <div class="content">
+        <p>
+            Trường THPT Vĩnh Cửu là một trong những cơ sở giáo dục có truyền thống dạy tốt – học tốt
+            trên địa bàn huyện Vĩnh Cửu. Nhà trường luôn chú trọng đổi mới phương pháp dạy học,
+            ứng dụng công nghệ thông tin nhằm nâng cao chất lượng giáo dục toàn diện cho học sinh.
+        </p>
+
+        <img src="https://v1.padlet.pics/3/image.webp?t=c_limit%2Cdpr_2%2Ch_348%2Cw_631&url=https%3A%2F%2Fu1.padletusercontent.com%2Fuploads%2Fpadlet-uploads-usc1%2F5093207150%2F122308efff65a040cc8a8b6bb468d9d0%2F_nh_1.png%3Fexpiry_token%3D5WaHZRdGG3LkUVQGy3SZ-zdRtq89aJeottSBaF_Hii8dmxJqYDvE2-MDbblcM-ZrVekXW99RReKkJFIoMoKio04hDUJmbp3nOiXZ_iRmDvi7of-ZcwnrNWhZ53n6RYV4euoZ4dBhJa4UcmLR8IAQqFe3l7lzTbNCKqBUPx8IWwckeXuRyIFCzRRuWkgyf1bc7xqQAC81aWvpTnxQRbb1jw%3D%3D">
+
+        <p>
+            Mục tiêu của nhà trường là xây dựng môi trường học tập thân thiện, hiện đại,
+            giúp học sinh phát triển năng lực, phẩm chất và kỹ năng cần thiết để đáp ứng
+            yêu cầu của xã hội hiện nay.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
