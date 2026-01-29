@@ -15,6 +15,7 @@
         body{
             background: #f5f5f5;
         }
+
         .wrapper{
             width: 85%;
             margin: 20px auto;
@@ -23,6 +24,7 @@
             border-radius: 15px;
             padding: 25px;
         }
+
         .header{
             display: flex;
             align-items: center;
@@ -44,57 +46,62 @@
             margin-bottom: 5px;
         }
 
-        .title p{
-            font-size: 14px;
-            color: #555;
-        }
         .menu{
-            background: #0077cc;
-            border-radius: 25px;
-            padding: 10px 0;
-            margin-bottom: 25px;
-        }
+    background: #0077cc;
+    border-radius: 25px;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    overflow: visible;
+}
+
         .menu > ul{
             list-style: none;
             display: flex;
             justify-content: space-around;
-            align-items: flex-start;
         }
+
         .menu li{
             color: white;
             font-weight: bold;
             cursor: pointer;
             position: relative;
         }
-        .menu input{
-            display: none;
+
+        .menu-title{
+            color: white;
+            font-weight: bold;
         }
+
         .submenu{
-    display: none;
-    background: white;
-    color: black;
-    margin-top: 10px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    width: 260px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-    list-style: none;        
+            display: none;
+            background: white;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 8px;
+            width: 260px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.3);
+            list-style: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            z-index: 1000;
+}
+        .submenu li{
+            color: black;          
+            font-weight: normal;
+            padding: 6px 0;
+            border-bottom: 1px solid #ddd;
+            line-height: 1.5;
+            text-align: left;
+}
+       .menu li{
+    position: relative;
 }
 
-.submenu li{
-    list-style: none;        
-    background: none;        
-    font-weight: normal;
-    padding: 6px 0;
-    border-bottom: 1px solid #ddd;
-    white-space: normal;     
-    word-break: keep-all;    
-    line-height: 1.5;
-    text-align: left;
+.menu li:hover .submenu{
+    display: block;
 }
-        .menu input:checked + .submenu{
-            display: block;
-        }
+
         .content p{
             text-indent: 10px;
             margin-bottom: 15px;
@@ -110,8 +117,8 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
         }
     </style>
-
 </head>
+
 <body>
 
 <div class="wrapper">
@@ -122,21 +129,17 @@
 
         <div class="title">
             <h1>TRƯỜNG THPT VĨNH CỬU</h1>
-           📍 Địa chỉ:
-<a href="https://www.google.com/maps/dir/11.0027463,106.8034057/Khu+…C4%A9nh+C%E1%BB%ADu,+%C4%90%E1%BB%93ng+Nai,+Vi%E1%BB%87t+Nam"
-   target="_blank"
-   style="color: #ffd966; text-decoration: none;">
-   Khu phố Phú Trạch, Phường Tân Triều, Tỉnh Đồng Nai
-</a>
-</p>
+            📍 Địa chỉ:
+            <a href="https://www.google.com/maps" target="_blank" style="color:#ffd966; text-decoration:none;">
+                Khu phố Phú Trạch, Phường Tân Triều, Tỉnh Đồng Nai
+            </a>
         </div>
     </div>
+
     <div class="menu">
         <ul>
-
             <li>
-                <label for="toan">Toán – Tin</label>
-                <input type="checkbox" id="toan">
+                <span class="menu-title">Toán – Tin</span>
                 <ul class="submenu">
                     <li>Thầy Phạm Đình Hùng</li>
                     <li>Cô Trần Hoàng Trang</li>
@@ -148,20 +151,19 @@
             </li>
 
             <li>
-                <label for="ly">Lý – Sinh – CN</label>
-                <input type="checkbox" id="ly">
+                <span class="menu-title">Lý – Sinh – CN</span>
                 <ul class="submenu">
                     <li>Cô Nguyễn Thị Minh Thơ</li>
                     <li>Cô Huỳnh Thị Lệ Tuyết</li>
                     <li>Cô Thái Thị Kim An</li>
                     <li>Cô Phạm Thị Lệ Quyên</li>
                     <li>Thầy Nguyễn Lê Quốc Bảo</li>
+                    <li>Cô Nguyễn Thị Nguyệt Ánh</li>
                 </ul>
             </li>
 
             <li>
-                <label for="van">Văn – Địa</label>
-                <input type="checkbox" id="van">
+                <span class="menu-title">Văn – Địa</span>
                 <ul class="submenu">
                     <li>Cô Võ Nguyễn Huyền Linh</li>
                     <li>Cô Nguyễn Mộng Bích</li>
@@ -171,61 +173,58 @@
                 </ul>
             </li>
 
-<li>
-            <label for="anh">Tiếng Anh</label>
-            <input type="checkbox" id="anh">
-            <ul class="submenu">
-                <li>Thầy Mạch Văn Cho</li>
-                <li>Cô Vũ Thị Thanh Thủy</li>
-                <li>Cô Phạm Linh Trang</li>
-                <li>Cô Phan Hồng Nhung</li>
-                <li>Cô Lê Thị Hồng Nhung</li>
-                <li>Cô Huỳnh Thị Thủy</li>
-            </ul>
-        </li>
+            <li>
+                <span class="menu-title">Tiếng Anh</span>
+                <ul class="submenu">
+                    <li>Thầy Mạch Văn Cho</li>
+                    <li>Cô Vũ Thị Thanh Thủy</li>
+                    <li>Cô Phạm Linh Trang</li>
+                    <li>Cô Phan Hồng Nhung</li>
+                    <li>Cô Lê Thị Hồng Nhung</li>
+                    <li>Cô Huỳnh Thị Thanh Thủy</li>
+                </ul>
+            </li>
 
-        <li>
-            <label for="suhoa">Sử – Hóa</label>
-            <input type="checkbox" id="suhoa">
-            <ul class="submenu">
-                <li>Cô Vũ Thị Ngọc Ánh</li>
-                <li>Cô Trương Thị Thanh Vân</li>
-                <li>Cô Phạm Thị Bích Hòa</li>
-                <li>Cô Lê Thị Hạnh</li>
-                <li>Cô Trương Thị Thanh Thảo</li>
-                <li>Cô Lương Thị Thủy</li>
-            </ul>
-        </li>
+            <li>
+                <span class="menu-title">Sử – Hóa</span>
+                <ul class="submenu">
+                    <li>Cô Vũ Thị Ngọc Ánh</li>
+                    <li>Cô Trương Thị Thanh Vân</li>
+                    <li>Cô Phạm Thị Bích Hòa</li>
+                    <li>Cô Lê Thị Hạnh</li>
+                    <li>Cô Trương Thị Thanh Thảo</li>
+                    <li>Cô Lương Thị Thủy</li>
+                </ul>
+            </li>
 
-        <li>
-            <label for="gdkp">GDKTPL – GDQP – GDTC</label>
-            <input type="checkbox" id="gdkp">
-            <ul class="submenu">
-                <li>Thầy Trần Sơn Hùng</li>
-                <li>Thầy Hồng Thái Tôn</li>
-                <li>Thầy Mai Quốc Định</li>
-                <li>Cô Lê Nguyệt Ánh</li>
-                <li>Cô Nguyễn Thị Minh Hải</li>
-            </ul>
-        </li>
-    </ul>
-</div>
+            <li>
+                <span class="menu-title">GDKTPL – GDQP – GDTC</span>
+                <ul class="submenu">
+                    <li>Thầy Trần Sơn Hùng</li>
+                    <li>Trần Minh Tuấn</li>
+                    <li>Thầy Hồng Thái Tôn</li>
+                    <li>Thầy Mai Quốc Định</li>
+                    <li>Cô Lê Nguyệt Ánh</li>
+                    <li>Cô Nguyễn Thị Minh Hải</li>
+                    <li>Cô Trịnh Thị Hương</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
     <div class="content">
         <p>
             Trường THPT Vĩnh Cửu là một trong những cơ sở giáo dục có truyền thống dạy tốt – học tốt
-            trên địa bàn huyện Vĩnh Cửu. Nhà trường luôn chú trọng đổi mới phương pháp dạy học,
-            ứng dụng công nghệ thông tin nhằm nâng cao chất lượng giáo dục toàn diện cho học sinh.
+            trên địa bàn huyện Vĩnh Cửu.
         </p>
 
         <img src="https://thptvinhcuu.com/thumb/400x250/1/2025-2026/50_nm/VC-0107.jpg">
 
         <p>
             Mục tiêu của nhà trường là xây dựng môi trường học tập thân thiện, hiện đại,
-            giúp học sinh phát triển năng lực, phẩm chất và kỹ năng cần thiết để đáp ứng
-            yêu cầu của xã hội hiện nay.
+            giúp học sinh phát triển toàn diện.
         </p>
     </div>
-
 </div>
 
 </body>
